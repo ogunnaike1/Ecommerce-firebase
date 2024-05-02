@@ -1,11 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            customColor: {
+          100: '#033769',
+          200: '#006D97',
+        },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .h-custom-vh {
+      height: 86vh;
+    }
+  </style>
 <body>
-    
+    <header class="bg-white">
+        <nav class="mx-auto bg-customColor-200 flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+            <div> <img class="h-12" src="./image/output-onlinepngtools.png" alt=""></div>
+            <div class="w-1/4 flex justify-between text-md font-medium text-white">
+                <a href="">Services</a>
+                <a href="">Company</a>
+                <a href="">Our work</a>
+            </div>
+            <div>
+                <button class="text-md font-medium h-10 text-customColor-100 bg-white w-24 rounded-md">Sign Up</button>
+                <button class="text-md font-medium h-10 text-white bg-customColor-100 w-24 rounded-md">Log in</button>
+            </div>
+        </nav>
+      </header>
+      <div class="w-1/1 h-custom-vh bg-cover bg-center" style="background-image: url('./image/bg-image.jpg')">
+
+      </div>
+  <!-- <h1 class="text-3xl text-red-700 font-bold underline">
+    Hello world!
+  </h1> -->
 </body>
 </html>
